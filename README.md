@@ -2,9 +2,7 @@
 
 # CipherSQL Mini
 
-Pick a task, write a query, run it, and see what happens. That’s it.
-
-No heavy setup, no clutter—just the basics to get comfortable with SQL.
+User can pick a task write a query and run it, and see what happens. That’s it.
 
 ---
 
