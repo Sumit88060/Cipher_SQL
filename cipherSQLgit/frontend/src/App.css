@@ -1,0 +1,159 @@
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+}
+    
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+
+.sidebar {
+  flex: 0 0 250px;   
+  padding: 15px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+}
+
+/* Title */
+.sidebar-title {
+  margin-bottom: 10px;
+}
+
+/* Assignment list */
+.assignment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Assignment card */
+
+.assignment-card {
+  width: 100%;              
+  box-sizing: border-box;     
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+  cursor: pointer;
+}
+
+.assignment-card.active {
+  border: 2px solid #007bff;
+  background: #eef6ff;
+}
+
+/* Main */
+
+.main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+  background: #fff;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Textarea */
+
+textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  font-family: monospace;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Button */
+button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+/* Error */
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Hint */
+.hint {
+  background: #fff8dc;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #f0c040;
+  border-radius: 6px;
+}
+
+/* mobile */
+
+@media (max-width: 640px) {
+  .app {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    flex: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .main {
+    padding: 15px;
+  }
+
+  th,
+  td {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+/* tabet */
+
+@media (max-width: 1024px) {
+  .sidebar {
+    flex: 0 0 200px;
+  }
+
+  .main {
+    padding: 15px;
+  }
+}
