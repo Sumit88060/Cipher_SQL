@@ -11,8 +11,8 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log('✅ MongoDB connected'))
-  .catch(() => console.warn('⚠️  MongoDB failed (non-fatal)'));
+  .then(() => console.log('MongoDB connected'))
+  .catch(() => console.warn(' MongoDB failed (non-fatal)'));
 
 app.get('/assignments', async (req, res) => {
   try {
@@ -105,4 +105,4 @@ Give a 1-2 sentence hint about what to fix.`;
   request.end();
 });
 
-app.listen(4000, () => console.log('✅ Server running at http://localhost:4000'));
+app.listen(4000, () => console.log('Server running at http://localhost:4000'));
