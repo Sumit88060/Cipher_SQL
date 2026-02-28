@@ -11,17 +11,18 @@ User can pick a task write a query and run it, and see what happens. That’s it
 ```
 cipher-mini/
 ├── backend/
-│   ├── db.js        # PostgreSQL connection
-│   ├── server.js    # All routes live here (yeah, just one file)
+│   ├── db.js            # PostgreSQL connection
+│   ├── queryLog.js      # Logs executed queries 
+│   ├── server.js        # All routes
 │   └── package.json
 ├── frontend/
 │   ├── src/
-│   │   ├── App.jsx  # Whole frontend in one file (kept simple)
+│   │   ├── App.jsx
 │   │   └── App.css
 │   ├── index.html
 │   └── package.json
-├── setup.sql        # Run this first to create tables/data
-└── package.json     # Root config to run both sides together
+├── setup.sql
+└── package.json
 ```
 
 ---
