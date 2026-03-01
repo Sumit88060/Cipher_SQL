@@ -1,10 +1,25 @@
-/* Base */
+
+:root {
+  --primary:    #007bff;
+  --bg:         #f7f7f7;
+  --white:      #fff;
+  --border:     #ddd;
+  --text:       #333;
+  --text-muted: #666;
+  --error:      red;
+  --hint-bg:    #fff8dc;
+  --hint-border:#f0c040;
+  --radius:     6px;
+  --font-mono:  monospace;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: #f7f7f7;
+  background: var(--bg);
+  color: var(--text);
 }
-    
+
 
 .app {
   display: flex;
@@ -13,19 +28,17 @@ body {
 
 
 .sidebar {
-  flex: 0 0 250px;   
+  flex: 0 0 250px;
   padding: 15px;
-  background: #fff;
-  border-right: 1px solid #ddd;
+  background: var(--white);
+  border-right: 1px solid var(--border);
   overflow-y: auto;
 }
 
-/* Title */
 .sidebar-title {
   margin-bottom: 10px;
 }
 
-/* Assignment list */
 .assignment-list {
   display: flex;
   flex-direction: column;
@@ -33,24 +46,21 @@ body {
   width: 100%;
 }
 
-/* Assignment card */
-
 .assignment-card {
-  width: 100%;              
-  box-sizing: border-box;     
+  width: 100%;
+  box-sizing: border-box;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   background: #fafafa;
   cursor: pointer;
 }
 
 .assignment-card.active {
-  border: 2px solid #007bff;
+  border: 2px solid var(--primary);
   background: #eef6ff;
 }
 
-/* Main */
 
 .main {
   flex: 1;
@@ -58,41 +68,38 @@ body {
   overflow-y: auto;
 }
 
-/* Table */
+
 table {
   border-collapse: collapse;
   width: 100%;
   margin-top: 10px;
-  background: #fff;
+  background: var(--white);
 }
 
-th,
-td {
-  border: 1px solid #ddd;
+th, td {
+  border: 1px solid var(--border);
   padding: 8px;
   font-size: 14px;
   text-align: left;
 }
 
-/* Textarea */
 
 textarea {
   width: 100%;
   margin-top: 10px;
   padding: 10px;
-  font-family: monospace;
-  border-radius: 6px;
+  font-family: var(--font-mono);
+  border-radius: var(--radius);
   border: 1px solid #ccc;
 }
 
-/* Button */
 button {
   margin-top: 10px;
   padding: 8px 16px;
   border: none;
-  border-radius: 6px;
-  background: #007bff;
-  color: white;
+  border-radius: var(--radius);
+  background: var(--primary);
+  color: var(--white);
   cursor: pointer;
 }
 
@@ -101,22 +108,31 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Error */
+
 .error {
-  color: red;
+  color: var(--error);
   margin-top: 10px;
 }
 
-/* Hint */
+
 .hint {
-  background: #fff8dc;
+  background: var(--hint-bg);
   padding: 10px;
   margin-top: 10px;
-  border: 1px solid #f0c040;
-  border-radius: 6px;
+  border: 1px solid var(--hint-border);
+  border-radius: var(--radius);
 }
 
-/* mobile */
+
+@media (max-width: 1024px) {
+  .sidebar {
+    flex: 0 0 200px;
+  }
+
+  .main {
+    padding: 15px;
+  }
+}
 
 @media (max-width: 640px) {
   .app {
@@ -128,32 +144,19 @@ button:disabled {
     flex: none;
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--border);
   }
 
   .main {
     padding: 15px;
   }
 
-  th,
-  td {
+  th, td {
     font-size: 12px;
     padding: 6px;
   }
 
   button {
     width: 100%;
-  }
-}
-
-/* tabet */
-
-@media (max-width: 1024px) {
-  .sidebar {
-    flex: 0 0 200px;
-  }
-
-  .main {
-    padding: 15px;
   }
 }
