@@ -18,7 +18,7 @@ cipher-mini/
 ├── frontend/
 │   ├── src/
 │   │   ├── App.jsx
-│   │   └── App.css
+│   │   └── App.scss
 │   ├── index.html
 │   └── package.json
 ├── setup.sql
