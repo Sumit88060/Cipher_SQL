@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import AssignmentPanel from "./AssignmentPanel";
+import Editor from '@monaco-editor/react';
 import "./App.css";
 
 const API = "http://localhost:4000";
@@ -130,10 +131,11 @@ export default function App() {
             )}
 {/* Write Qurey */}
             <h3>Write Query</h3>
-            <textarea
-              rows="5"
+           <Editor
+              height="200px"
+              language="sql"
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+               onChange={(value) => setQuery(value || '')}
             />
             <button onClick={runQuery}>Run</button>
 
