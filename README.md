@@ -1,6 +1,4 @@
-# Cipher_SQL
-
-# CipherSQL Mini
+# CipherSchools 
 
 User can pick a task write a query and run it, and see what happens. That’s it.
 
